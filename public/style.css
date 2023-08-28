@@ -1,0 +1,57 @@
+body{
+    background-color: beige;
+    
+}
+.priceplans{
+    margin-top:5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+background-color: #ecf0f1;
+color: grey;
+display: inline-block;
+/*display: inline-block;*/
+border-radius: 5px;
+border-bottom: 2px solid grey;
+vertical-align: top;
+height: 25em;
+margin-right: -125px;
+margin-left: 0px;
+color: brown;
+
+ }
+
+ .widgets{
+    height: 25em;
+    width: 40em;
+    margin-top:5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+background-color: #ecf0f1;
+color: grey;
+display: inline-block;
+/*display: inline-block;*/
+border-radius: 5px;
+border-bottom: 2px solid grey;
+vertical-align: top;
+color: brown;
+
+
+
+ }
+
+ 
+.all{
+ font-family: 'Times New Roman', Times, serif;
+ 
+}
+button{
+background-color: burlywood;
+  color: black;
+  border-radius: 2em;
+}

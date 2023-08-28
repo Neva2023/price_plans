@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="phoneBill.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    <div x-data="phoneBills" class="all">
+
+    <div class="priceplans">
+    <h1>Price Plans</h1>
+
+    <table border="1" class="table">
+        <thead>
+            <th>ID</th>
+            <th>PLAN NAME</th>
+            <th>SMSPRICE</th>
+            <th>CALL PRICE</th>
+        </thead>
+        <tbody>
+            <template x-for="price_plan in price_plans">
+                <tr>
+                    <td x-text="price_plan.id"></td>
+                    <td x-text="price_plan.plan_name"></td>
+                    <td x-text="price_plan.sms_price"></td>
+                    <td x-text="price_plan.call_price"></td>
+                </tr>
+            </template>
+            
+        </tbody>
+    </table>
+    </div>
+    
+   <div class="widgets">
+    <h3>TOTAL PHONE BILL</h3>
+    <strong>Enter price plan</strong>
+    <input x-model="price_plan">
+    <strong>Enter usage</strong>
+    <input x-model="actions">
+    <button @click="get()">Get Bill</button>
+
+    <div x-text="total" ></div>
+    <div x-text="message"></div>      
+
+  
+   <h3>ADD A PRICE PLAN</h3>
+    <strong>Plane name:</strong> 
+    <div><input x-model="price_plan1"></div>
+    <strong>Call price:</strong>
+    <div><input x-model="call_price1"></div>
+    <strong>Sms price:</strong>
+    <div><input x-model="sms_price1">
+    <button @click="add()">Add Plan</button>
+    </div>
+        <h3>DELETE A PRICE PLAN</h3>
+       <strong>Plan name:</strong> 
+        <input x-model="plan_name">
+        <button @click="del()">Delete</button>
+    
+   </div>
+    </div>
+
+    
+</body>
+</html>
